@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>Sasti Notebook</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body> 
+    <div class="main">
+        <img src="https://www.flaticon.com/svg/static/icons/svg/752/752326.svg" class="logo">
+        <h1>Sasti Notebook</h1>
+    </div>
+
+        <div class="head">
+            <div class="inputbox0">
+                <div class="inputbox">
+                    <form>
+                        <input id="t" type="text" placeholder="Title" maxlength="30"></br>
+                        <textarea id="m" placeholder="Note Anything..."></textarea></br>
+                        <img id="add" src="https://www.flaticon.com/svg/static/icons/svg/875/875515.svg">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="saved">
+            <div class="box" id="b1">
+                    <input id="t1" type="text" placeholder="Title"></br>
+                    <textarea id="m1" placeholder="Note Anthing..."></textarea></br>
+                    <button onclick="document.getElementById('b1').style.display='none'"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+            <div class="box" id="b2">
+                    <input id="t2" type="text" placeholder="Title"></br>
+                    <textarea id="m2" placeholder="Note Anthing..."></textarea></br>
+                    <button onclick="document.getElementById('b2').style.display='none'"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+            <div class="box" id="b3">
+                    <input id="t3" type="text" placeholder="Title"></br>
+                    <textarea id="m3" placeholder="Note Anthing..."></textarea></br>
+                    <button onclick="document.getElementById('b3').style.display='none'"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+            <div class="box" id="b4">
+                    <input id="t4" type="text" placeholder="Title"></br>
+                    <textarea id="m4" placeholder="Note Anthing..."></textarea></br>
+                    <button onclick="document.getElementById('b4').style.display='none'"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Radhey Technicals 2020 | All Rights Reserved </p>
+        </div>
+    
+</body>
+</html>
+<script>
+
+let a = 0;
+let add = document.getElementById('add');
+
+add.addEventListener('click', () => {
+
+    document.querySelector('.saved').style.display = 'inline-flex';
+    let t = document.getElementById('t').value;
+    let m = document.getElementById('m').value;
+    console.log(t, m);
+
+    if(a==0)
+    {
+        document.getElementById('b1').style.display='block';
+        document.getElementById('t1').value= t ;
+        document.getElementById('m1').value= m ;
+        document.getElementById('t').value = null;
+        document.getElementById('m').value = null;
+        return a++;
+    }
+    else if(a==1)
+    {
+        document.getElementById('b2').style.display='block';
+        document.getElementById('t2').value= t ;
+        document.getElementById('m2').value= m ;
+        document.getElementById('t').value = null;
+        document.getElementById('m').value = null;
+        return a++;
+    }
+    else if(a==2)
+    {
+        document.getElementById('b3').style.display='block';
+        document.getElementById('t3').value= t ;
+        document.getElementById('m3').value= m ;
+        document.getElementById('t').value = null;
+        document.getElementById('m').value = null;
+        return a++;
+    }
+    else if(a==3)
+    {
+        document.getElementById('b4').style.display='block';
+        document.getElementById('t4').value= t ;
+        document.getElementById('m4').value= m ;
+        document.getElementById('t').value = null;
+        document.getElementById('m').value = null;
+        return a++;
+    }
+    else
+    {
+        return a=0;
+    }
+
+});
+
+</script>
